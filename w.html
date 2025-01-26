@@ -1,0 +1,183 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Design</title>
+    <link rel="stylesheet" href="style copy.css">
+    <!-- Link to Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+       
+       
+    </style>
+</head>
+<body id="top">
+
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <!-- Make logo clickable and reload the page -->
+                <a href="javascript:void(0);" onclick="location.reload();"><h2 class="logo">GrowNet</h2></a>
+                
+            </div>
+
+            <div class="menu">
+                <ul>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="markets.html" onclick="showContent('markets')">MARKETS</a></li>
+                <li><a href="jobs.html" onclick="showContent('jobs')">JOBS</a></li>
+                <li><a href="https://bhuvan17.ccbp.tech/" target="_blank" onclick="showContent('chatbot')">CHATBOT</a></li>
+                    
+                    
+                </ul>
+            </div>
+
+            
+            
+        </div> 
+        <div class="translate-box">
+            <button class="translate-btn">
+                <span id="button-text">Translate the Page</span>
+            </button>
+        </div>
+
+        <div class="location-box">
+            <button class="location-btn">
+                <p id="location">Loading location...</p>
+            </button>
+        </div>
+        
+        
+
+        
+        <!-- Content Section (Market and Job Cards) -->
+        <div class="content">
+
+            <h2 style="color: #ffeb3b;">Find Markets </h2>
+
+            <!-- Market Cards Section -->
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-store"></i>
+                    <h3>Retail Market</h3>
+                    <p>Explore a wide variety of products and services from local stores and online shopping platforms.</p>
+                    <button class="explore-btn" onclick="window.location.href='retail.html';">Explore More</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Stock Market</h3>
+                    <p>Get insights into stock trading, market analysis, and investment opportunities.</p>
+                    <button class="explore-btn" onclick="window.location.href='stock.html';">Explore More</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Legal Market</h3>
+                    <p>Discover legal services, including law firms, advice, and consultancy across various sectors.</p>
+                    <button class="explore-btn" onclick="window.location.href='legal.html';">Explore More</button>
+                </div>
+            </div>
+            <h2 style="color:#ffeb3b;" >Find Jobs</h2>
+            <!-- Job Cards Section -->
+
+            <div class="card-container">
+                <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Software Developer</h3>
+                    <p>Join the tech world as a software developer, working with the latest tools and technologies.</p>
+                    <button class="explore-btn" onclick="window.location.href='soft.html';">Explore More</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Mechanical Engineer</h3>
+                    <p>Design, build, and maintain mechanical systems for various industries and applications.</p>
+                    <button class="explore-btn" onclick="window.location.href='mech.html';">Explore More</button>
+                </div>
+                <div class="card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Graphic Designer</h3>
+                    <p>Use creativity to create stunning visual content for websites, advertising, and branding.</p>
+                    <button class="explore-btn" onclick="window.location.href='graphic.html';">Explore More</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Content is hidden by default on page load
+            document.getElementById('home-link').addEventListener('click', function() {
+                var content = document.getElementById('content');
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';  // Show the content
+                } else {
+                    content.style.display = 'none';   // Hide the content
+                }
+            });
+        });
+        const texts = ["Translate the Page", "భాషను మార్చండి"];
+let currentTextIndex = 0;
+
+// Function to change the button text
+function changeText() {
+    const buttonText = document.getElementById("button-text");
+    
+    // Change the button text by toggling between the two texts
+    currentTextIndex = (currentTextIndex + 1) % texts.length;
+    buttonText.textContent = texts[currentTextIndex];
+}
+
+// Change text every 3 seconds (3000ms)
+setInterval(changeText, 2000);
+document.querySelector('.translate-btn').addEventListener('click', function() {
+            // Redirect to wtel.html page when the button is clicked
+            window.location.href = 'wtel.html';
+        });
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // Use OpenStreetMap Nominatim API for reverse geocoding
+                const apiUrl = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
+
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Extract the area, neighborhood, or district from the address components
+                        let area = null;
+
+                        // Look for area, neighborhood, or district
+                        if (data.address.suburb) {
+                            area = data.address.suburb;  // Suburb/neighborhood
+                        } else if (data.address.city) {
+                            area = data.address.city;  // City
+                        } else if (data.address.district) {
+                            area = data.address.district;  // District
+                        }
+
+                        // Display the area or place
+                        if (area) {
+                            document.getElementById("location").innerText = `You are in: ${area}`;
+                        } else {
+                            document.getElementById("location").innerText = "Area not recognized.";
+                        }
+                    })
+                    .catch(error => {
+                        document.getElementById("location").innerText = "Unable to retrieve your location.";
+                    });
+            }, function(error) {
+                document.getElementById("location").innerText = "Unable to retrieve your location.";
+            });
+        } else {
+            document.getElementById("location").innerText = "Geolocation is not supported by your browser.";
+        }
+    </script>
+    
+   
+        
+</body>
+</html>
