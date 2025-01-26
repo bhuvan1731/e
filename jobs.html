@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Companies in India</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #27c8f5, #ffff00);
+            color: white;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            margin-top: 50px;
+            text-transform: uppercase;
+            color: #000902;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            font-family: 'Roboto', sans-serif; /* Modern font */
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        .section {
+            margin-bottom: 60px;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #67114d;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif; /* Modern font */
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Card styling */
+        .card {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s ease;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #fff;
+        }
+
+        /* Card container for market and job sections */
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        /* Centered the 5th card */
+        .centered-card {
+            width: 100% !important;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Explore More Button styling */
+        .explore-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff7200;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .explore-btn:hover {
+            background-color: #f9f6f4;
+            color: #ff7200;
+        }
+
+        /* Background for each card */
+        .card-1 {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/300x200/ff7e5f/ffffff?text=TCS');
+        }
+        .card-2 {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/300x200/feb47b/ffffff?text=Infosys');
+        }
+        .card-3 {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/300x200/ff7e5f/ffffff?text=Wipro');
+        }
+        .card-4 {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/300x200/feb47b/ffffff?text=HCL');
+        }
+        .card-5 {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/300x200/ff7e5f/ffffff?text=Tech+Mahindra');
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top Companies in India</h1>
+
+        <!-- Software Companies Section -->
+        <div class="section">
+            <h2>Top Software Companies</h2>
+            <div class="card-container">
+                <div class="card card-1">
+                    <i class="fas fa-store"></i>
+                    <h3>Tata Consultancy Services (TCS)</h3>
+                    <p>One of the largest IT services firms in India and globally, offering services in software development, IT consulting, and business solutions.</p>
+                    <a href="https://www.tcs.com" class="explore-btn">Visit TCS</a>
+                </div>
+                <div class="card card-2">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Infosys</h3>
+                    <p>A multinational corporation providing IT consulting and software services, including cloud computing, AI, and business transformation solutions.</p>
+                    <a href="https://www.infosys.com" class="explore-btn">Visit Infosys</a>
+                </div>
+                <div class="card card-3">
+                    <i class="fas fa-balance-scale"></i>
+                    <h3>Wipro</h3>
+                    <p>A leading global IT, consulting, and business process services company offering software development, cloud services, and enterprise solutions.</p>
+                    <a href="https://www.wipro.com" class="explore-btn">Visit Wipro</a>
+                </div>
+                <div class="card card-4">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>HCL Technologies</h3>
+                    <p>A global IT services company offering software development, cloud computing, cybersecurity, and IT infrastructure services.</p>
+                    <a href="https://www.hcltech.com" class="explore-btn">Visit HCL Technologies</a>
+                </div>
+                <!-- Centered 5th card -->
+                <div class="card card-5 centered-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Tech Mahindra</h3>
+                    <p>A major player in software development and IT services, providing digital transformation, consulting, and enterprise solutions.</p>
+                    <a href="https://www.techmahindra.com" class="explore-btn">Visit Tech Mahindra</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mechanical Companies Section -->
+        <div class="section">
+            <h2>Top Mechanical Engineering Companies</h2>
+            <div class="card-container">
+                <div class="card card-1">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Larsen & Toubro</h3>
+                    <p>India's largest engineering and construction company, specializing in large-scale infrastructure projects and manufacturing.</p>
+                    <a href="https://www.larsentoubro.com" class="explore-btn">Visit L&T</a>
+                </div>
+                <div class="card card-2">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Mahindra & Mahindra</h3>
+                    <p>Known for its manufacturing of automobiles, farm equipment, and providing solutions in various mechanical engineering sectors.</p>
+                    <a href="https://www.mahindra.com" class="explore-btn">Visit Mahindra</a>
+                </div>
+                <div class="card card-3">
+                    <i class="fas fa-industry"></i>
+                    <h3>BHEL (Bharat Heavy Electricals Limited)</h3>
+                    <p>Leading manufacturer of power generation equipment and machinery for the industrial sector.</p>
+                    <a href="https://www.bhel.com" class="explore-btn">Visit BHEL</a>
+                </div>
+                <div class="card card-4">
+                    <i class="fas fa-cogs"></i>
+                    <h3>GE India</h3>
+                    <p>GE India is part of General Electric, providing solutions in mechanical engineering, energy, and industrial technologies.</p>
+                    <a href="https://www.ge.com/in" class="explore-btn">Visit GE India</a>
+                </div>
+                <!-- Centered 5th card -->
+                <div class="card card-5 centered-card">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Kirloskar Brothers Limited</h3>
+                    <p>A leading player in manufacturing pumps, valves, and other mechanical engineering solutions.</p>
+                    <a href="https://www.kirloskarsystems.com" class="explore-btn">Visit Kirloskar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Graphic Design Companies Section -->
+        <div class="section">
+            <h2>Top Graphic Design Companies</h2>
+            <div class="card-container">
+                <div class="card card-1">
+                    <i class="fas fa-pencil-ruler"></i>
+                    <h3>Landor & Fitch</h3>
+                    <p>Global brand consulting and design firm, specializing in creating iconic brands and visual identities.</p>
+                    <a href="https://www.landor.com" class="explore-btn">Visit Landor</a>
+                </div>
+                <div class="card card-2">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Pentagram</h3>
+                    <p>A renowned design studio, delivering innovative graphic design and branding services to businesses globally.</p>
+                    <a href="https://www.pentagram.com" class="explore-btn">Visit Pentagram</a>
+                </div>
+                <div class="card card-3">
+                    <i class="fas fa-image"></i>
+                    <h3>MetaDesign</h3>
+                    <p>Global digital agency specializing in design, branding, and user experience across digital platforms.</p>
+                    <a href="https://www.metadesign.com" class="explore-btn">Visit MetaDesign</a>
+                </div>
+                <div class="card card-4">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Huge</h3>
+                    <p>A digital agency delivering branding, design, and user experience solutions to clients worldwide.</p>
+                    <a href="https://www.hugeinc.com" class="explore-btn">Visit Huge</a>
+                </div>
+                <!-- Centered 5th card -->
+                <div class="card card-5 centered-card">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Red Ant</h3>
+                    <p>A design consultancy firm focused on branding, graphic design, and digital solutions.</p>
+                    <a href="https://www.redantdesign.com" class="explore-btn">Visit Red Ant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
